@@ -22,7 +22,7 @@ public class App {
                 .setBootstrapServers(bootstrapServers)
                 .setTopics(topic)
                 .setGroupId("flink-console-consumer")
-                .setStartingOffsets(OffsetsInitializer.earliest())
+                .setStartingOffsets(OffsetsInitializer.latest())
                 .setValueOnlyDeserializer(new SimpleStringSchema());
 
         if (username != null && password != null) {
